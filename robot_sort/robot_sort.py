@@ -129,6 +129,8 @@ class SortingRobot:
 
             # swap the item and continue sorting
             self.swap_item()
+
+            # move to the next position
             self.move_right()
 
             # this sorting pattern is a bubble sort method
