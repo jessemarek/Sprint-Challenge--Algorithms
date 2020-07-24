@@ -28,6 +28,7 @@ c) Runtime complexity would be O(n). The function could also be written iterativ
     We can see easily in the iterative solution that the number of inputs impacts the runtime in linear time.
 
 ## Exercise II
+    The runtime of this proposed solution would be O(log(n))
 
     ```python
 
