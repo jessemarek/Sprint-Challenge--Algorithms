@@ -29,4 +29,28 @@ c) Runtime complexity would be O(n). The function could also be written iterativ
 
 ## Exercise II
 
+    ```python
 
+    # we are given an n-story building and need to figure out
+    # which floor we can drop and egg and it will not break
+        # egg breaks if dropped >= f floor
+        # egg doesn't break if dropped < f floor
+    # we need to minimize dropped or broken eggs
+    def find_floor(num_floors):
+        # find the midpoint of the number of floors in the building
+        mid = num_floors // 2
+
+        # one base case
+        # we find the floor when there is no more left in the searching list
+        if len(num_floors) == 1:
+            return mid
+
+        # drop an egg and check if it breaks
+        if mid >= 'broken egg':
+            # if it breaks repeat this again on the lower half
+            return find_floor(num_floors[:mid])
+        # otherwise the egg didn't break and we need to check higher on the building
+        else:
+            return find_floor(num_floors[mid + 1:])
+
+    ```
